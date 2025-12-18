@@ -19,13 +19,13 @@
         }
         h2 {
             text-align: center;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
             font-size: 22px;
         }
         label {
             font-weight: bold;
             display: block;
-            margin-top: 10px;
+            margin-top: 12px;
         }
         input, select, textarea {
             width: 100%;
@@ -33,28 +33,59 @@
             margin-top: 5px;
             font-size: 16px;
         }
+        textarea {
+            resize: none;
+        }
+
+        /* Profile photo */
+        .profile-photo {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .profile-photo img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #ccc;
+        }
+
+        /* Radio buttons */
+        .radio-group {
+            display: flex;
+            gap: 15px;
+            margin-top: 5px;
+        }
+        .radio-group label {
+            font-weight: normal;
+        }
         input[type="radio"] {
             width: auto;
             margin-right: 5px;
         }
-        textarea {
-            resize: none;
+
+        /* Buttons */
+        .button-group {
+            display: flex;
+            gap: 15px;
+            margin-top: 25px;
         }
-        button {
+        .button-group button {
             width: 100%;
             padding: 10px;
-            margin-top: 15px;
-            background: #007bff;
-            color: white;
+            font-size: 16px;
             border: none;
             border-radius: 5px;
-            font-size: 16px;
             cursor: pointer;
+            color: white;
         }
-        button[type="reset"] {
+        .button-group button[type="submit"] {
+            background: #007bff;
+        }
+        .button-group button[type="reset"] {
             background: #6c757d;
         }
-        button:hover {
+        .button-group button:hover {
             opacity: 0.9;
         }
     </style>
@@ -64,6 +95,10 @@
 <div class="container">
     <h2>Student Profile</h2>
 
+    <div class="profile-photo">
+        <img src="photo.jpg" alt="Profile Photo">
+    </div>
+
     <label>Roll No</label>
     <input type="text" placeholder="Enter Roll Number">
 
@@ -71,10 +106,12 @@
     <input type="text" placeholder="Enter Student Name">
 
     <label>Branch</label>
-    <input type="radio" name="branch" value="CSE" checked> CSE<br>
-    <input type="radio" name="branch" value="IT"> IT<br>
-    <input type="radio" name="branch" value="ECE"> ECE<br>
-    <input type="radio" name="branch" value="EEE"> EEE
+    <div class="radio-group">
+        <label><input type="radio" name="branch" value="CSE" checked> CSE</label>
+        <label><input type="radio" name="branch" value="IT"> IT</label>
+        <label><input type="radio" name="branch" value="ECE"> ECE</label>
+        <label><input type="radio" name="branch" value="EEE"> EEE</label>
+    </div>
 
     <label>Year</label>
     <select>
@@ -109,8 +146,10 @@
     <label>Address</label>
     <textarea rows="3" placeholder="Enter Address"></textarea>
 
-    <button type="submit">Submit</button>
-    <button type="reset">Clear</button>
+    <div class="button-group">
+        <button type="submit">Submit</button>
+        <button type="reset">Clear</button>
+    </div>
 </div>
 
 </body>
