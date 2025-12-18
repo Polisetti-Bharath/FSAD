@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Profile</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+            font-size: 16px;
+        }
+        .container {
+            width: 600px;
+            margin: 40px auto;
+            background: #fff;
+            padding: 20px 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 22px;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            font-size: 16px;
+        }
+        input[type="radio"] {
+            width: auto;
+            margin-right: 5px;
+        }
+        textarea {
+            resize: none;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 15px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button[type="reset"] {
+            background: #6c757d;
+        }
+        button:hover {
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Student Profile</h2>
+
+    <label>Roll No</label>
+    <input type="text" placeholder="Enter Roll Number">
+
+    <label>Name</label>
+    <input type="text" placeholder="Enter Student Name">
+
+    <label>Branch</label>
+    <input type="radio" name="branch" value="CSE" checked> CSE<br>
+    <input type="radio" name="branch" value="IT"> IT<br>
+    <input type="radio" name="branch" value="ECE"> ECE<br>
+    <input type="radio" name="branch" value="EEE"> EEE
+
+    <label>Year</label>
+    <select>
+        <option>Y21</option>
+        <option>Y22</option>
+        <option>Y23</option>
+        <option>Y24</option>
+    </select>
+
+    <label>Section</label>
+    <select>
+        <option>E1</option>
+        <option>E2</option>
+        <option>E3</option>
+        <option>A1</option>
+        <option>A2</option>
+        <option>A3</option>
+        <option>A4</option>
+        <option>A5</option>
+        <option>A6</option>
+    </select>
+
+    <label>Date of Birth</label>
+    <input type="date">
+
+    <label>Contact</label>
+    <input type="tel" placeholder="Enter Mobile Number">
+
+    <label>Email</label>
+    <input type="email" placeholder="Enter Email Address">
+
+    <label>Address</label>
+    <textarea rows="3" placeholder="Enter Address"></textarea>
+
+    <button type="submit">Submit</button>
+    <button type="reset">Clear</button>
+</div>
+
+</body>
+</html>
