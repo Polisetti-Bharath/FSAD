@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Profile</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+    <header class="header">
+        <div>
+            <h2>Student Profile</h2>
+            <p class="subtitle">Academic Information Form</p>
+        </div>
+        <div class="profile-photo">
+            <img src="photo.jpg" alt="Profile Photo">
+        </div>
+    </header>
+
+    <form action="#" method="post">
+
+        <div class="form-grid">
+
+            <div class="form-group">
+                <label for="roll">Roll No</label>
+                <input type="text" id="roll" name="roll" required>
+            </div>
+
+            <div class="form-group">
+                <label for="date">Date</label>
+                <input type="date" id="date" name="date" readonly>
+            </div>
+
+            <div class="form-group full">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group full">
+                <label>Branch</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="branch" value="CSE" checked> CSE</label>
+                    <label><input type="radio" name="branch" value="IT"> IT</label>
+                    <label><input type="radio" name="branch" value="ECE"> ECE</label>
+                    <label><input type="radio" name="branch" value="EEE"> EEE</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="year">Year</label>
+                <select id="year" name="year" required>
+                    <option value="">Select</option>
+                    <option>Y21</option>
+                    <option>Y22</option>
+                    <option>Y23</option>
+                    <option>Y24</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="section">Section</label>
+                <select id="section" name="section" required>
+                    <option value="">Select</option>
+                    <option>E1</option>
+                    <option>E2</option>
+                    <option>E3</option>
+                    <option>A1</option>
+                    <option>A2</option>
+                    <option>A3</option>
+                    <option>A4</option>
+                    <option>A5</option>
+                    <option>A6</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="dob">Date of Birth</label>
+                <input type="date" id="dob" name="dob" required>
+            </div>
+
+            <div class="form-group">
+                <label for="contact">Contact</label>
+                <input type="tel" id="contact" name="contact" required>
+            </div>
+
+            <div class="form-group full">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group full">
+                <label for="address">Address</label>
+                <textarea id="address" name="address" rows="3" required></textarea>
+            </div>
+
+        </div>
+
+        <div class="button-group">
+            <button type="submit" class="primary">Submit</button>
+            <button type="reset" class="secondary">Cancel</button>
+        </div>
+
+    </form>
+</div>
+
+<script>
+    const today = new Date().toISOString().split('T')[0];
+    document.getElementById('date').value = today;
+</script>
+
+</body>
+</html>
