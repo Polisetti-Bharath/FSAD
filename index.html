@@ -4,21 +4,33 @@
     <meta charset="UTF-8">
     <title>Student Profile</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <div class="container">
+
+    <!-- Header -->
     <header class="header">
-        <div>
+        <div class="header-left">
             <h2>Student Profile</h2>
             <p class="subtitle">Academic Information Form</p>
+
+            <div class="badges">
+                <span>Verified</span>
+                <span>Secure</span>
+                <span>2025</span>
+            </div>
         </div>
+
         <div class="profile-photo">
             <img src="photo.jpg" alt="Profile Photo">
         </div>
     </header>
 
+    <!-- Form -->
     <form action="#" method="post">
 
         <div class="form-grid">
@@ -97,17 +109,24 @@
 
         </div>
 
+        <!-- Buttons -->
         <div class="button-group">
             <button type="submit" class="primary">Submit</button>
             <button type="reset" class="secondary">Cancel</button>
         </div>
 
+        <p class="form-note">
+            Please verify all details carefully before submission.
+        </p>
+
     </form>
+
 </div>
 
+<!-- Auto-fill current date -->
 <script>
     const today = new Date().toISOString().split('T')[0];
-    document.getElementById('date').value = today;
+    document.getElementById("date").value = today;
 </script>
 
 </body>
